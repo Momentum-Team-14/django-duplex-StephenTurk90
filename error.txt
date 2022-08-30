@@ -1,0 +1,37 @@
+django-duplex-StephenTurk90 on  main via 🐍 v3.10.6 (django-duplex-StephenTurk90)
+❯ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): flashcards.
+Run 'python manage.py migrate' to apply them.
+August 29, 2022 - 21:50:52
+Django version 4.1, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C%
+
+django-duplex-StephenTurk90 on  main [!] via 🐍 v3.10.6 (django-duplex-StephenTurk90) took 9s
+❯ python manage.py migrate
+Traceback (most recent call last):
+  File "/Users/Stephen/Desktop/Momentum/Homework/django-duplex-StephenTurk90/manage.py", line 22, in <module>
+    main()
+  File "/Users/Stephen/Desktop/Momentum/Homework/django-duplex-StephenTurk90/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/Users/Stephen/.local/share/virtualenvs/django-duplex-StephenTurk90-IEY_964M/lib/python3.10/site-packages/django/core/management/__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "/Users/Stephen/.local/share/virtualenvs/django-duplex-StephenTurk90-IEY_964M/lib/python3.10/site-packages/django/core/management/__init__.py", line 440, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/Users/Stephen/.local/share/virtualenvs/django-duplex-StephenTurk90-IEY_964M/lib/python3.10/site-packages/django/core/management/base.py", line 402, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/Users/Stephen/.local/share/virtualenvs/django-duplex-StephenTurk90-IEY_964M/lib/python3.10/site-packages/django/core/management/base.py", line 448, in execute
+    output = self.handle(*args, **options)
+  File "/Users/Stephen/.local/share/virtualenvs/django-duplex-StephenTurk90-IEY_964M/lib/python3.10/site-packages/django/core/management/base.py", line 96, in wrapped
+    res = handle_func(*args, **kwargs)
+  File "/Users/Stephen/.local/share/virtualenvs/django-duplex-StephenTurk90-IEY_964M/lib/python3.10/site-packages/django/core/management/commands/migrate.py", line 117, in handle
+    executor.loader.check_consistent_history(connection)
+  File "/Users/Stephen/.local/share/virtualenvs/django-duplex-StephenTurk90-IEY_964M/lib/python3.10/site-packages/django/db/migrations/loader.py", line 327, in check_consistent_history
+    raise InconsistentMigrationHistory(
+django.db.migrations.exceptions.InconsistentMigrationHistory: Migration admin.0001_initial is applied before its dependency flashcards.0001_initial on database 'default'.
