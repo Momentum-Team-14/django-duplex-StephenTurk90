@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def flashcards(request):
+    return render(request, 'flashcards/flashcards.html', {'flashcards': flashcards})
