@@ -6,10 +6,10 @@ class User(AbstractUser):
 
 
 class Flashcards(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=250)
     question = models.CharField(max_length=250)
     answer = models.CharField(max_length=250)
-
+    
     class Meta:
         verbose_name_plural = "flashcards"
 
