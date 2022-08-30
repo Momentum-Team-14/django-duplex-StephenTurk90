@@ -7,13 +7,13 @@ System check identified no issues (0 silenced).
 
 You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): flashcards.
 Run 'python manage.py migrate' to apply them.
-August 29, 2022 - 21:33:25
+August 29, 2022 - 21:50:52
 Django version 4.1, using settings 'config.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ^C%
 
-django-duplex-StephenTurk90 on  main via 🐍 v3.10.6 (django-duplex-StephenTurk90) took 7s
+django-duplex-StephenTurk90 on  main [!] via 🐍 v3.10.6 (django-duplex-StephenTurk90) took 9s
 ❯ python manage.py migrate
 Traceback (most recent call last):
   File "/Users/Stephen/Desktop/Momentum/Homework/django-duplex-StephenTurk90/manage.py", line 22, in <module>
@@ -35,6 +35,3 @@ Traceback (most recent call last):
   File "/Users/Stephen/.local/share/virtualenvs/django-duplex-StephenTurk90-IEY_964M/lib/python3.10/site-packages/django/db/migrations/loader.py", line 327, in check_consistent_history
     raise InconsistentMigrationHistory(
 django.db.migrations.exceptions.InconsistentMigrationHistory: Migration admin.0001_initial is applied before its dependency flashcards.0001_initial on database 'default'.
-
-django-duplex-StephenTurk90 on  main via 🐍 v3.10.6 (django-duplex-StephenTurk90)
-❯ pyth
