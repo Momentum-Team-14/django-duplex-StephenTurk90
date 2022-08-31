@@ -2,6 +2,6 @@
 
 {% block content %}
     {% for flashcard in flashcards %}
-        {{ flashcard}}
+        <a href="{% url 'results' pk=flashcard.pk %}">{{ flashcard }} 
     {% endfor %}
 {% endblock %}
