@@ -2,6 +2,8 @@
 
 {% block content %}
     {% for flashcard in flashcards %}
-        <a href="{% url 'results' pk=flashcard.pk %}">{{ flashcard }} 
+        <div><a href="{% url 'results' pk=flashcard.pk %}">{{ flashcard }}</a>
+        <a href="{% url 'edit_card' pk=flashcard.pk %}">Edit your flashcard</a>
+        <a href="{% url 'delete' pk=flashcard.pk %}">Delete Flashcard</a></div>
     {% endfor %}
 {% endblock %}
