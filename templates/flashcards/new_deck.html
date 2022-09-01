@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-
-{% block content %}
-    {% for deck in decks %}
-        <div class="deck"><a href="{% url 'results' pk=deck.pk %}">{{ new_deck }}</a></div>
-        <div class="changes"><a href="{% url 'edit_card' pk=deck.pk %}">Edit</a>
-        <a href="{% url 'delete' pk=deck.pk %}">Delete</a></div>
-    {% endfor %}
-{% endblock %}

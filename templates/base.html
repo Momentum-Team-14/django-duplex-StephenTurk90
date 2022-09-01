@@ -6,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Flashcards</title>
 </head>
-<header><a href= {% url 'flashcards' %}>Kana Flashcards 仮名</a> <a href= {% url 'create_card' %}>Create a new flashcard</a></header>
+<header>
+    <a href= {% url 'flashcards' %}>Kana Flashcards 仮名</a>
+</header> 
+<p>
+    <a href= {% url 'create_card' %}>Create a new flashcard</a>
+</p>
 <body>
     {% block content %}
     {% endblock %}

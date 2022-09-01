@@ -2,8 +2,11 @@
 
 {% block content %}
     {% for flashcard in flashcards %}
-        <div class="flashcards"><a href="{% url 'results' pk=flashcard.pk %}">{{ flashcard }}</a></div>
-        <div class="changes"><a href="{% url 'edit_card' pk=flashcard.pk %}">Edit</a>
-        <a href="{% url 'delete' pk=flashcard.pk %}">Delete</a></div>
+        <div class="all">
+            <div class="flashcards"><a href="{% url 'results' pk=flashcard.pk %}">{{ flashcard }}</a></div>
+            <div class="changes">Flashcard Options: <a href="{% url 'edit_card' pk=flashcard.pk %}">Edit</a>
+                <a href="{% url 'delete' pk=flashcard.pk %}">Delete</a></div>
+        </div>
     {% endfor %}
 {% endblock %}
+

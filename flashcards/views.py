@@ -1,47 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Flashcards, Deck
-from .forms import FlashcardsForm, DeckForm
+from .models import Flashcards
+from .forms import FlashcardsForm
 from django.shortcuts import redirect
-
-
-def deck(request):
-    deck = Deck.objects.all()
-    return render(request, 'flashcards/list_decks.html'), {'decks': decks}
-
-
-def new_deck(request):
-    if request.method == 'POST':
-        form = DeckForm(request.POST)
-        if form.is_valid():
-            deck = form.save()
-            return redirect('results', pk=deck.pk)
-    else:
-        form = DeckForm()
-    return render(request, 'flashcards/new_deck.html', {'form': form})
-
-
-def deck_detail(request, pk):
-    deck = get_object_or_404(Deck, pk=pk)
-    cards = deck.cards.all()
-    return render(request, 'flashcards/deck_detail.html', {'deck': deck})
-
-
-def edit_deck(request, pk):
-    deck = get_object_or_404(Deck, pk=pk)
-    if request.method == 'POST':
-        deck_form = DeckForm(request.POST, instance=deck)
-        if deck_form.is_valid():
-            deck = deck_form.save()
-            return redirect('deck_detail', pk=deck.pk)
-    else:
-        deck_form = DeckForm(instance=deck)
-    return render(request, 'flashcards/edit_deck.html', {'form': form})
-
-
-def delete_deck(request, pk):
-    deck = get_object_or_404(Deck, pk=pk)
-    deck.delete()
-    return redirect('flashcards')
 
 
 def flashcards(request):
@@ -78,7 +38,7 @@ def edit_card(request, pk):
     return render(request, 'flashcards/edit_card.html', {'form': form})
 
 
-def delete_flashcard(request, pk):
+def delete_card(request, pk):
     flashcard = get_object_or_404(Flashcards, pk=pk)
     flashcard.delete()
     return redirect('flashcards')
