@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<header>
-    <a href= {% url 'flashcards' %}>Kana Flashcards 仮名</a>
-</header> 
-<p>
-    <a href= {% url 'create_card' %}>Create a new flashcard</a>
-</p>
 <body>
+<h1>
+    <a href= {% url 'flashcards' %}>Kana Flashcards 仮名</a>
+</h1> 
+<h2>
+    <a href= {% url 'create_card' %}>Create a new flashcard</a>
+</h2>
     {% block content %}
     {% endblock %}
 </body>

@@ -1,4 +1,1 @@
-header {
-    color: blue;
-    font-size: 2rem;
-}
+{% load static %}

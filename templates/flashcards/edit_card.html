@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Edit your flashcard</h1>
+    <h3>Edit your flashcard</h3>
     <form method="POST">  
         {% csrf_token %}
         {{ form.as_p }}
